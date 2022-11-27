@@ -9,6 +9,7 @@ import { Customer } from './customer';
 export class CustomerComponent {
     //nesne kullanılabilmesi için import edilmesi gerekir.
     customers: Customer[] = []
+    selectedCustomer: Customer;
 
     //ngOnInit uygulamanın load eventidir.
     ngOnInit() {
@@ -34,6 +35,8 @@ export class CustomerComponent {
 
     //Event Binding
     selectCustomer(customer: Customer) {
-        alert(customer.firstName)
+        // alert(customer.firstName)
+        this.selectedCustomer = customer;
+        //gönderilen customer değerini this.selectedCustomer'a atama
     }
 }

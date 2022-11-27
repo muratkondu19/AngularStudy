@@ -3,9 +3,18 @@
 <!-- <p>Müşteri {{customer}}</p> -->
 
 <ul>
-    <!-- li tagleriyle for döngüsü kullanma -->
-    <li *ngFor="let customer of customers" (click)="selectCustomer(customer)">
-        <!--event adını ve fonksiyonunu vererek event binding işlemi-->
-        {{customer.firstName}} {{customer.lastName}} {{customer.age}}
-    </li>
+    <div *ngFor="let customer of customers" (click)="selectCustomer(customer)">
+        <!-- li tagleriyle for döngüsü kullanma -->
+        <li *ngIf="customer.age>18">
+            <!--event adını ve fonksiyonunu vererek event binding işlemi-->
+            <div> {{customer.firstName}} {{customer.lastName}} {{customer.age}}</div>
+        </li>
+    </div>
 </ul>
+
+<!-- componentte yer alan selectedCustomer değişkeni tanımlı ise define edilmiş ise  -->
+<!-- ngIf ile belirli şartlara göre html görüntülerini kontrol edebiliyoruz,else durumu ekleyebiliyoruz -->
+<strong *ngIf="selectedCustomer;else elseBlock">{{selectedCustomer.firstName}} seçtiniz</strong>
+
+<!-- elseBlock herhangi bir isim olabilir -->
+<ng-template #elseBlock>Herhangi bir seçim yapılmadı</ng-template>
