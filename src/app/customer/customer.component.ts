@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Customer } from './customer';
 
 @Component({
@@ -10,6 +10,8 @@ export class CustomerComponent {
     //nesne kullanılabilmesi için import edilmesi gerekir.
     customers: Customer[] = []
     selectedCustomer: Customer;
+    //city:string; ->bunu bir değer olarak üst componentten almak istiyorsak 
+    @Input() city: string //city değerini üst componentten alabilir / app component
 
     //ngOnInit uygulamanın load eventidir.
     ngOnInit() {

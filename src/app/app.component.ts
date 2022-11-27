@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title = 'angular-udemy-course';
+    city: string = 'İzmir' //buradaki değeri alt componenetlere göndermek istenirse (customer gibi)
 }
 
 // @component →AppComponent  classının bir component olduğunu belirtir ve angular bu şekilde davranır. 
