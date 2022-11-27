@@ -18,6 +18,11 @@ export class PostComponent {
 
     ngOnInit() {
         //uygulama açıldığında postları çekme işlemi için ->HttpClientModule
+
+        this.getPosts();
+    }
+
+    getPosts() {
         this.http.get < Post[] > (this.path).subscribe(response => {
                 //uygulama açıldığında postlar doldurulur
                 this.posts = response
