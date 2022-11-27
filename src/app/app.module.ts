@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomerComponent } from './customer/customer.component';
 import { ListComponent } from './list/list.component';
-import { HttpClientModule } from '@angular/common/http'; //httpclient module import etme
+import { HttpClientModule } from '@angular/common/http';
+import { PostComponent } from './post/post.component'; //httpclient module import etme
 // src/app/app.moduls.ts→Modül içerisinde kullanılan componentleri listeleriz. 
 // Yeni bir component eklendiğinde CLI otomatik olarak modüle ekler. 
 // Tanım yapıldığı için bu modül içerisindeki componenti başka bir component içerisinde kullanabiliriz.
@@ -13,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http'; //httpclient module imp
     declarations: [
         AppComponent,
         CustomerComponent,
-        ListComponent
+        ListComponent,
+        PostComponent
     ],
     imports: [
         BrowserModule,
