@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomerComponent } from './customer/customer.component';
+import { ListComponent } from './list/list.component';
 
 // src/app/app.moduls.ts→Modül içerisinde kullanılan componentleri listeleriz. 
 // Yeni bir component eklendiğinde CLI otomatik olarak modüle ekler. 
@@ -11,7 +12,8 @@ import { CustomerComponent } from './customer/customer.component';
 @NgModule({
     declarations: [
         AppComponent,
-        CustomerComponent
+        CustomerComponent,
+        ListComponent
     ],
     imports: [
         BrowserModule,
