@@ -5,16 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomerComponent } from './customer/customer.component';
 
+// src/app/app.moduls.ts→Modül içerisinde kullanılan componentleri listeleriz. 
+// Yeni bir component eklendiğinde CLI otomatik olarak modüle ekler. 
+// Tanım yapıldığı için bu modül içerisindeki componenti başka bir component içerisinde kullanabiliriz.
 @NgModule({
-  declarations: [
-    AppComponent,
-    CustomerComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        CustomerComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
