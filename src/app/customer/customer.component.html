@@ -4,7 +4,8 @@
 
 <ul>
     <!-- li tagleriyle for döngüsü kullanma -->
-    <li *ngFor="let customer of customers">
+    <li *ngFor="let customer of customers" (click)="selectCustomer(customer)">
+        <!--event adını ve fonksiyonunu vererek event binding işlemi-->
         {{customer.firstName}} {{customer.lastName}} {{customer.age}}
     </li>
 </ul>

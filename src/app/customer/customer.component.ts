@@ -31,4 +31,9 @@ export class CustomerComponent {
             }
         ]
     }
+
+    //Event Binding
+    selectCustomer(customer: Customer) {
+        alert(customer.firstName)
+    }
 }
