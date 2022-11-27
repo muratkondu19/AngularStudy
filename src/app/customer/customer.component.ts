@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Customer } from './customer';
 
 @Component({
     selector: 'app-customer',
@@ -6,5 +7,28 @@ import { Component } from '@angular/core';
     styleUrls: ['./customer.component.scss']
 })
 export class CustomerComponent {
-    customer: string = "Murat Kondu"
+    //nesne kullanılabilmesi için import edilmesi gerekir.
+    customers: Customer[] = []
+
+    //ngOnInit uygulamanın load eventidir.
+    ngOnInit() {
+        this.customers = [{
+                id: 1,
+                firstName: 'John',
+                lastName: 'Doe',
+                age: 18,
+            },
+            {
+                id: 2,
+                firstName: 'Jane',
+                lastName: 'Doe',
+                age: 19,
+            }, {
+                id: 3,
+                firstName: 'John',
+                lastName: 'Doe',
+                age: 20,
+            }
+        ]
+    }
 }
